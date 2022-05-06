@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Box, Card, Button, Typography, styled } from '@mui/material';
+import { Card, Button, Typography, styled } from '@mui/material';
 
 import { emojis } from '../shared/emojis';
 
-export const GameComponent = (props) => {
+export const GameComponent = () => {
   //randomly pick emoji
   const emoji1 = emojis[Math.floor(Math.random() * emojis.length)];
   const emoji2 = emojis[Math.floor(Math.random() * emojis.length)];

@@ -3,6 +3,7 @@ import '@fontsource/roboto';
 import { Box, Typography } from '@mui/material'
 
 import { GameComponent } from './Components/GameComponent';
+import { ResultsComponent } from './Components/ResultsComponent';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       <Typography variant='h4' componenet='h1' gutterBottom style={{ color: '#245B67' }}>
         intuition.io
       </Typography>
-      <GameComponent />
+      {/* <GameComponent /> */}
+      <ResultsComponent />
     </Box>
   );
 }
