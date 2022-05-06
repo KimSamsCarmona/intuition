@@ -40,7 +40,7 @@ export const GameComponent = () => {
       <EmojiButton variant='contained' sx={{ p:2, m:2, bgcolor:'#FFFFFFFF', fontSize: 50 }}>{emoji2}</EmojiButton>
       <EmojiButton variant='contained' sx={{ p:2, m:2, bgcolor:'#FFFFFFFF', fontSize: 50 }}>{emoji3}</EmojiButton>
     </Card>
-    <Box
+    {/* <Box
       sx={{
         display: 'flex',
         alignItems: 'center',
@@ -62,7 +62,7 @@ export const GameComponent = () => {
         >
           Submit
       </Button>
-    </Box>
+    </Box> */}
   </div>
   );
 }
