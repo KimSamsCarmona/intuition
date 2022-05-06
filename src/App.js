@@ -1,12 +1,10 @@
 import React from 'react';
 import '@fontsource/roboto';
 import { Box, Typography } from '@mui/material'
-import { emojis } from './shared/emojis';
 
 import { GameComponent } from './Components/GameComponent';
 
 function App() {
-  console.log(emojis.length);
   return (
   <Box
     style={{ width: '80%' }}

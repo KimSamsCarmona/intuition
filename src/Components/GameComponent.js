@@ -23,9 +23,9 @@ export const GameComponent = () => {
         bgcolor: '#9BD8E659',
         borderRadius: 1,
       }}>
-      <Button variant='contained' sx={{ p:2, m:2, bgcolor:'#FFFFFFBF'}}>{emoji1}</Button>
-      <Button variant='contained' sx={{ p:2, m:2, bgcolor:'#FFFFFFBF'}}>{emoji2}</Button>
-      <Button variant='contained' sx={{ p:2, m:2, bgcolor:'#FFFFFFBF'}}>{emoji3}</Button>
+      <Button variant='contained' sx={{ p:2, m:2, bgcolor:'#FFFFFFBF', fontSize: 50 }}>{emoji1}</Button>
+      <Button variant='contained' sx={{ p:2, m:2, bgcolor:'#FFFFFFBF', fontSize: 50 }}>{emoji2}</Button>
+      <Button variant='contained' sx={{ p:2, m:2, bgcolor:'#FFFFFFBF', fontSize: 50 }}>{emoji3}</Button>
     </Card>
     <Box
       sx={{
