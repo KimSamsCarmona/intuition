@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Box, Card, CardContent, CardActions, Button, Typography } from '@mui/material';
 
+
 function Item(props) {
   const { sx, ...other } = props;
   return (
@@ -26,10 +27,18 @@ function Item(props) {
 
 export const GameComponent = () => {
   return (
-    <Box>
-      <h2 style={{ color: '#245B67',  }}>Pick One</h2>
+    <Box
+      style={{ width: '80%' }}
+      sx={{
+        alignContent: 'center',
+        mx: 'auto',
+        borderRadius: 1,
+    }}>
+      <Typography variant='h2' gutterBottom style={{ color: '#245B67', fontWeight: '900' }}>
+        Pick one
+      </Typography>
       <Card
-        style={{ width: '60%' }}
+        style={{ width: '90%' }}
         sx={{
           display: 'grid',
           gridTemplateRows: 'repeat(3, 1fr)',
