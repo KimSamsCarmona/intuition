@@ -27,6 +27,7 @@ function Item(props) {
 export const GameComponent = () => {
   return (
     <Box>
+      <h2 style={{ color: '#245B67',  }}>Pick One</h2>
       <Card
         style={{ width: '60%' }}
         sx={{
