@@ -27,31 +27,25 @@ function Item(props) {
 
 export const GameComponent = () => {
   return (
-    <Box
-      style={{ width: '80%' }}
-      sx={{
-        alignContent: 'center',
-        mx: 'auto',
-        borderRadius: 1,
-    }}>
+    <div>
       <Typography variant='h2' gutterBottom style={{ color: '#245B67', fontWeight: '900' }}>
-        Pick one
-      </Typography>
-      <Card
-        style={{ width: '90%' }}
-        sx={{
-          display: 'grid',
-          gridTemplateRows: 'repeat(3, 1fr)',
-          alignContent: 'center',
-          p: 4,
-          mx: 'auto',
-          bgcolor: '#9BD8E659',
-          borderRadius: 1,
-        }}>
-        <Button sx={{ bgcolor: '#FFFFFFBF', p:2, m:2 }}>Item 1</Button>
-        <Button sx={{ bgcolor: '#FFFFFFBF', p:2, m:2 }}>Item 2</Button>
-        <Button sx={{ bgcolor: '#FFFFFFBF', p:2, m:2 }}>Item 3</Button>
-      </Card>
-  </Box>
+      Pick one
+    </Typography>
+    <Card
+      style={{ width: '90%' }}
+      sx={{
+        display: 'grid',
+        gridTemplateRows: 'repeat(3, 1fr)',
+        alignContent: 'center',
+        p: 4,
+        mx: 'auto',
+        bgcolor: '#9BD8E659',
+        borderRadius: 1,
+      }}>
+      <Button sx={{ bgcolor: '#FFFFFFBF', p:2, m:2 }}>Item 1</Button>
+      <Button sx={{ bgcolor: '#FFFFFFBF', p:2, m:2 }}>Item 2</Button>
+      <Button sx={{ bgcolor: '#FFFFFFBF', p:2, m:2 }}>Item 3</Button>
+    </Card>
+  </div>
   );
 }
