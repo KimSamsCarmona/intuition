@@ -1,10 +1,10 @@
 import React from 'react';
 
+import { GameComponent } from './Components/GameComponent';
+
 function App() {
   return (
-    <div>
-      Hello 
-    </div>
+    <GameComponent />
   );
 }
 
