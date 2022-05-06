@@ -1,12 +1,25 @@
 import * as React from 'react';
-import { Box, Card, Button, Typography } from '@mui/material';
+import { Box, Card, Button, Typography, styled } from '@mui/material';
 
 import { emojis } from '../shared/emojis';
 
 export const GameComponent = () => {
+  //randomly pick emoji
   const emoji1 = emojis[Math.floor(Math.random()*emojis.length)];
   const emoji2 = emojis[Math.floor(Math.random()*emojis.length)];
   const emoji3 = emojis[Math.floor(Math.random()*emojis.length)];
+
+  //show selected
+  const EmojiButton = styled(Button) ({
+    '&:hover': {
+      backgroundColor:'#9bd8e6'
+    },
+    '&:focus': {
+      boxShadow: '0 0 0 0.2rem rgba(155, 216, 230, .5)', 
+      backgroundColor: '#2596BE'
+    },
+  });
+
   return (
     <div>
       <Typography variant='h2' gutterBottom style={{ color: '#245B67', fontWeight: '900' }}>
@@ -23,9 +36,9 @@ export const GameComponent = () => {
         bgcolor: '#9BD8E659',
         borderRadius: 1,
       }}>
-      <Button variant='contained' sx={{ p:2, m:2, bgcolor:'#FFFFFFBF', fontSize: 50 }}>{emoji1}</Button>
-      <Button variant='contained' sx={{ p:2, m:2, bgcolor:'#FFFFFFBF', fontSize: 50 }}>{emoji2}</Button>
-      <Button variant='contained' sx={{ p:2, m:2, bgcolor:'#FFFFFFBF', fontSize: 50 }}>{emoji3}</Button>
+      <EmojiButton variant='contained' sx={{ p:2, m:2, bgcolor:'#FFFFFFFF', fontSize: 50 }}>{emoji1}</EmojiButton>
+      <EmojiButton variant='contained' sx={{ p:2, m:2, bgcolor:'#FFFFFFFF', fontSize: 50 }}>{emoji2}</EmojiButton>
+      <EmojiButton variant='contained' sx={{ p:2, m:2, bgcolor:'#FFFFFFFF', fontSize: 50 }}>{emoji3}</EmojiButton>
     </Card>
     <Box
       sx={{
