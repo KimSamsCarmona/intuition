@@ -29,7 +29,19 @@ export const GameComponent = () => {
         justifyContent: 'center',
         p: 4
       }}>
-      <Button fullwidth size='large' variant='contained' style={{ width: '100%', height: '63px', backgroundColor: '#2596BE', color: 'black', fontSize: '2rem', fontWeight: 'bolder' }}>
+      <Button 
+        fullwidth 
+        size='large' 
+        variant='contained' 
+        style={{ 
+          width:'100%', 
+          height:'63px', 
+          backgroundColor:'#2596BE', 
+          color:'black', 
+          fontSize:'2rem', 
+          fontWeight:'bolder' 
+          }}
+        >
           Submit
       </Button>
     </Box>
