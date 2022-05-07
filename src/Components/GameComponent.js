@@ -1,14 +1,41 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, Button, Typography, styled } from '@mui/material';
 
 import { emojis } from '../shared/emojis';
 
-export const GameComponent = () => {
-  //randomly pick emoji
-  const emoji1 = emojis[Math.floor(Math.random() * emojis.length)];
-  const emoji2 = emojis[Math.floor(Math.random() * emojis.length)];
-  const emoji3 = emojis[Math.floor(Math.random() * emojis.length)];
+//randomly pick emoji
+const emoji1 = emojis[Math.floor(Math.random() * emojis.length)];
+const emoji2 = emojis[Math.floor(Math.random() * emojis.length)];
+const emoji3 = emojis[Math.floor(Math.random() * emojis.length)];
 
+//emoji onClick functions
+const emojiClick1=() => {
+  alert(emoji1);
+}
+
+const emojiClick2=() => {
+  alert(emoji2);
+}
+
+const emojiClick3=() => {
+  alert(emoji3)
+}
+
+// export const WinEmoji = async () => {
+//   if (emojiClick1) {
+//     return {emoji1}
+//   } 
+//   if (emojiClick2) {
+//     return {emoji2}
+//   }
+//   if (emojiClick3) {
+//     return {emoji3}
+//   } else {
+//     alert('Pick an emoji')
+//   }
+// }
+
+export const GameComponent = () => {
   //show selected
   const EmojiButton = styled(Button)({
     '&:hover': {
@@ -19,18 +46,6 @@ export const GameComponent = () => {
       backgroundColor: '#2596BE'
     },
   });
-
-  const emojiClick1=() => {
-    alert(emoji1);
-  }
-
-  const emojiClick2=() => {
-    alert(emoji2);
-  }
-
-  const emojiClick3=() => {
-    alert(emoji3)
-  }
 
   return (
     <div>

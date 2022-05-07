@@ -1,7 +1,11 @@
-import * as React from 'react';
+import React from 'react';
 import { Avatar, Box, Button, Card, Grid, Typography } from '@mui/material';
 
-export const ResultsComponent = () => {
+import { GameComponent, WinEmoji } from './GameComponent';
+
+
+
+export const ResultsComponent = (props) => {
 
   return (
     <div>
@@ -36,7 +40,7 @@ export const ResultsComponent = () => {
                 bgcolor: '#FFFFFFFF',
                 borderRadius: 1,
               }}>
-              Results Window
+              {/* {WinEmoji} */}
             </Card>
           </Grid>
           <Grid item xs={12}>

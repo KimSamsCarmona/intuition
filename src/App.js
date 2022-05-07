@@ -18,7 +18,7 @@ function App() {
       <Typography variant='h4' componenet='h1' gutterBottom style={{ color: '#245B67' }}>
         intuition.io
       </Typography>
-      {/* <GameComponent /> */}
+      <GameComponent />
       <ResultsComponent />
     </Box>
   );
