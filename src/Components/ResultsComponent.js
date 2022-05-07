@@ -32,6 +32,7 @@ export const ResultsComponent = (props) => {
               sx={{
                 display: 'grid',
                 alignContent: 'center',
+                textAlign: 'center',
                 p: 4,
                 mx: 'auto',
                 bgcolor: '#FFFFFFFF',
@@ -53,6 +54,7 @@ export const ResultsComponent = (props) => {
               sx={{
                 display: 'grid',
                 alignContent: 'center',
+                textAlign: 'center',
                 p: 4,
                 mx: 'auto',
                 bgcolor: '#FFFFFFFF',

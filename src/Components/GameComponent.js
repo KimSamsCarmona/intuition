@@ -8,7 +8,6 @@ export const GameComponent = ({ winEmoji, setEmoji }) => {
 
   // const [winEmoji, setEmoji] = useState(false) -- LIFTED STATE TO APP.JS
 
-
   //randomly pick emoji
   const emoji1 = emojis[Math.floor(Math.random() * emojis.length)];
   const emoji2 = emojis[Math.floor(Math.random() * emojis.length)];
