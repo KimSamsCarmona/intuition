@@ -52,29 +52,6 @@ export const GameComponent = () => {
         <EmojiButton variant='contained' sx={{ p: 2, m: 2, bgcolor: '#FFFFFFFF', fontSize: 50 }} onClick={emojiClick2}>{emoji2}</EmojiButton>
         <EmojiButton variant='contained' sx={{ p: 2, m: 2, bgcolor: '#FFFFFFFF', fontSize: 50 }} onClick={emojiClick3}>{emoji3}</EmojiButton>
       </Card>
-      {/* <Box
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        p: 4
-      }}>
-      <Button 
-        fullwidth 
-        size='large' 
-        variant='contained' 
-        style={{ 
-          width:'100%', 
-          height:'63px', 
-          backgroundColor:'#2596BE', 
-          color:'black', 
-          fontSize:'2rem', 
-          fontWeight:'bolder' 
-          }}
-        >
-          Submit
-      </Button>
-    </Box> */}
     </div>
   );
 }
