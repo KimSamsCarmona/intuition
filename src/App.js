@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '@fontsource/roboto';
 import { Box, Typography } from '@mui/material'
 
@@ -6,6 +6,9 @@ import { GameComponent } from './Components/GameComponent';
 import { ResultsComponent } from './Components/ResultsComponent';
 
 function App() {
+
+  const [winEmoji, setEmoji] = useState(false)
+
   return (
     <Box
       style={{ width: '80%' }}
@@ -18,7 +21,8 @@ function App() {
       <Typography variant='h4' componenet='h1' gutterBottom style={{ color: '#245B67' }}>
         intuition.io
       </Typography>
-      <GameComponent />
+      <GameComponent winEmoji={winEmoji} setEmoji={setEmoji} />
+      <ResultsComponent winEmoji={winEmoji} />
     </Box>
   );
 }
