@@ -19,7 +19,6 @@ function App() {
         intuition.io
       </Typography>
       <GameComponent />
-      <ResultsComponent />
     </Box>
   );
 }

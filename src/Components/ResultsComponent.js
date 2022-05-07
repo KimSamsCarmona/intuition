@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { useCallback }from 'react';
 import { Avatar, Box, Button, Card, Grid, Typography } from '@mui/material';
 
-import { GameComponent, WinEmoji } from './GameComponent';
+import { GameComponent } from './GameComponent';
 
 
-
-export const ResultsComponent = (props) => {
-
+export const ResultsComponent = ({winEmoji}) => {
   return (
     <div>
       <Typography variant='h2' gutterBottom style={{ color: '#245B67', fontWeight: '900' }}>
@@ -40,7 +38,7 @@ export const ResultsComponent = (props) => {
                 bgcolor: '#FFFFFFFF',
                 borderRadius: 1,
               }}>
-              {/* {WinEmoji} */}
+              {winEmoji}
             </Card>
           </Grid>
           <Grid item xs={12}>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, Button, Typography, styled } from '@mui/material';
 
 import { emojis } from '../shared/emojis';
+import { ResultsComponent } from './ResultsComponent';
 
 export const GameComponent = () => {
 
@@ -9,7 +10,7 @@ export const GameComponent = () => {
     const emoji1 = emojis[Math.floor(Math.random() * emojis.length)];
     const emoji2 = emojis[Math.floor(Math.random() * emojis.length)];
     const emoji3 = emojis[Math.floor(Math.random() * emojis.length)];
-    
+
   //show selected
   const EmojiButton = styled(Button)({
     '&:hover': {
@@ -24,9 +25,9 @@ export const GameComponent = () => {
   const [winEmoji, setEmoji] = useState('')
 
 
-  //emoji onClick functions
+  //emoji onClick functions, update winEmoji state
   const emojiClick1=() => {
-   setEmoji(emoji1)
+   setEmoji(emoji1);
   }
 
   const emojiClick2=() => {
@@ -34,9 +35,10 @@ export const GameComponent = () => {
   }
 
   const emojiClick3=() => {
-    setEmoji(emoji3)
+    setEmoji(emoji3);
   }
 
+  //log selected "winning" emoji to the consoloe
   useEffect(() => {
     console.log(winEmoji)
   })
