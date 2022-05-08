@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { Card, Button, Typography, styled } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 import { emojis } from '../shared/emojis';
 
 
 export const GameComponent = ({ winEmoji, setEmoji }) => {
-
   // const [winEmoji, setEmoji] = useState(false) -- LIFTED STATE TO APP.JS
 
   //randomly pick emoji
@@ -58,9 +58,9 @@ export const GameComponent = ({ winEmoji, setEmoji }) => {
           bgcolor: '#9BD8E659',
           borderRadius: 1,
         }}>
-        <EmojiButton variant='contained' sx={{ p: 2, m: 2, bgcolor: '#FFFFFFFF', fontSize: 50 }} onClick={emojiClick1}>{emoji1}</EmojiButton>
-        <EmojiButton variant='contained' sx={{ p: 2, m: 2, bgcolor: '#FFFFFFFF', fontSize: 50 }} onClick={emojiClick2}>{emoji2}</EmojiButton>
-        <EmojiButton variant='contained' sx={{ p: 2, m: 2, bgcolor: '#FFFFFFFF', fontSize: 50 }} onClick={emojiClick3}>{emoji3}</EmojiButton>
+        <Link to='/results'><EmojiButton variant='contained' sx={{ p: 2, m: 2, bgcolor: '#FFFFFFFF', fontSize: 50 }} onClick={emojiClick1}>{emoji1}</EmojiButton></Link>
+        <Link to='/results'><EmojiButton variant='contained' sx={{ p: 2, m: 2, bgcolor: '#FFFFFFFF', fontSize: 50 }} onClick={emojiClick2}>{emoji2}</EmojiButton></Link>
+        <Link to='/results'><EmojiButton variant='contained' sx={{ p: 2, m: 2, bgcolor: '#FFFFFFFF', fontSize: 50 }} onClick={emojiClick3}>{emoji3}</EmojiButton></Link>
       </Card>
     </div>
   );

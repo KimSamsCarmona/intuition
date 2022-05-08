@@ -1,9 +1,9 @@
 import React from 'react';
 import { Avatar, Box, Button, Card, Grid, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
-export const ResultsComponent = (props) => {
-  const winEmoji = props.winEmoji
-
+export const ResultsComponent = ({winEmoji}) => {
+ 
   return (
     <div>
       <Typography variant='h2' gutterBottom style={{ color: '#245B67', fontWeight: '900' }}>
@@ -73,21 +73,23 @@ export const ResultsComponent = (props) => {
           justifyContent: 'center',
           p: 4
         }}>
-        <Button
-          fullwidth
-          size='large'
-          variant='contained'
-          style={{
-            width: '100%',
-            height: '63px',
-            backgroundColor: '#2596BE',
-            color: 'black',
-            fontSize: '2rem',
-            fontWeight: 'bolder'
-          }}
-        >
-          Play Again
+        <Link to='/'>
+            <Button
+            fullwidth
+            size='large'
+            variant='contained'
+            style={{
+              width: '100%',
+              height: '63px',
+              backgroundColor: '#2596BE',
+              color: 'black',
+              fontSize: '2rem',
+              fontWeight: 'bolder'
+            }}
+          >
+            Play Again
         </Button>
+        </Link>
       </Box>
     </div>
   );
