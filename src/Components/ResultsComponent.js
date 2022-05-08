@@ -15,6 +15,33 @@ export const ResultsComponent = ({winEmoji}) => {
   const quitGame = () => {
     navigate ('/');
   }
+
+  // const playerOne = '';
+  // const playerTwo = '';
+
+  // //results text for pending, match, no match
+  // const resultsText =  () => {
+  //   if (playerOne === playerTwo) {
+  //     return (
+  //       <Typography variant='h2' gutterBottom style={{ color: '#245B67', fontWeight: '900' }}>
+  //       You Matched!
+  //     </Typography>
+  //     )
+  //   } 
+  //   if (playerTwo && playerOne !== playerTwo) {
+  //     return (
+  //       <Typography variant='h2' gutterBottom style={{ color: '#245B67', fontWeight: '900' }}>
+  //       You Didn't Match. Try again!
+  //     </Typography>
+  //     )
+  //   } else {
+  //     return (
+  //       <Typography variant='h2' gutterBottom style={{ color: '#245B67', fontWeight: '900' }}>
+  //       Waiting for other player...
+  //     </Typography>
+  //     )
+  //   }
+  // }
   return (
     <div>
       <Typography variant='h2' gutterBottom style={{ color: '#245B67', fontWeight: '900' }}>
