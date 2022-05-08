@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import { Card, Button, Typography, styled } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { emojis } from '../shared/emojis';
 
 
 export const GameComponent = ({ winEmoji, setEmoji }) => {
   // const [winEmoji, setEmoji] = useState(false) -- LIFTED STATE TO APP.JS
+
+  const navigate = useNavigate();
 
   //randomly pick emoji
   const emoji1 = emojis[Math.floor(Math.random() * emojis.length)];
@@ -27,14 +29,17 @@ export const GameComponent = ({ winEmoji, setEmoji }) => {
   //emoji onClick functions, update winEmoji state
   const emojiClick1 = () => {
     setEmoji(emoji1);
+    navigate('/results');
   }
 
   const emojiClick2 = () => {
     setEmoji(emoji2);
+    navigate('/results');
   }
 
   const emojiClick3 = () => {
     setEmoji(emoji3);
+    navigate('/results');
   }
 
   //log selected "winning" emoji to the consoloe
@@ -58,9 +63,9 @@ export const GameComponent = ({ winEmoji, setEmoji }) => {
           bgcolor: '#9BD8E659',
           borderRadius: 1,
         }}>
-        <Link to='/results'><EmojiButton variant='contained' sx={{ p: 2, m: 2, bgcolor: '#FFFFFFFF', fontSize: 50 }} onClick={emojiClick1}>{emoji1}</EmojiButton></Link>
-        <Link to='/results'><EmojiButton variant='contained' sx={{ p: 2, m: 2, bgcolor: '#FFFFFFFF', fontSize: 50 }} onClick={emojiClick2}>{emoji2}</EmojiButton></Link>
-        <Link to='/results'><EmojiButton variant='contained' sx={{ p: 2, m: 2, bgcolor: '#FFFFFFFF', fontSize: 50 }} onClick={emojiClick3}>{emoji3}</EmojiButton></Link>
+        <EmojiButton variant='contained' sx={{ p: 2, m: 2, bgcolor: '#FFFFFFFF', fontSize: 50 }} onClick={emojiClick1}>{emoji1}</EmojiButton>
+        <EmojiButton variant='contained' sx={{ p: 2, m: 2, bgcolor: '#FFFFFFFF', fontSize: 50 }} onClick={emojiClick2}>{emoji2}</EmojiButton>
+        <EmojiButton variant='contained' sx={{ p: 2, m: 2, bgcolor: '#FFFFFFFF', fontSize: 50 }} onClick={emojiClick3}>{emoji3}</EmojiButton>
       </Card>
     </div>
   );
