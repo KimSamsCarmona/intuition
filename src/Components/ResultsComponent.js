@@ -1,9 +1,13 @@
 import React from 'react';
 import { Avatar, Box, Button, Card, Grid, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const ResultsComponent = ({winEmoji}) => {
- 
+  
+  const navigate = useNavigate();
+  const playAgain = () => {
+    navigate ('/');
+  }
   return (
     <div>
       <Typography variant='h2' gutterBottom style={{ color: '#245B67', fontWeight: '900' }}>
@@ -73,7 +77,6 @@ export const ResultsComponent = ({winEmoji}) => {
           justifyContent: 'center',
           p: 4
         }}>
-        <Link to='/'>
             <Button
             fullwidth
             size='large'
@@ -86,10 +89,10 @@ export const ResultsComponent = ({winEmoji}) => {
               fontSize: '2rem',
               fontWeight: 'bolder'
             }}
+            onClick={playAgain}
           >
             Play Again
         </Button>
-        </Link>
       </Box>
     </div>
   );
