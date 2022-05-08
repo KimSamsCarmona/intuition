@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import { GameComponent } from './Components/GameComponent';
 import { ResultsComponent } from './Components/ResultsComponent';
+import { HomeComponent } from './Components/HomeComponent';
 
 function App() {
 
@@ -23,7 +24,8 @@ function App() {
         intuition.io
       </Typography>
       <Routes>
-        <Route path='/' element={<GameComponent winEmoji={winEmoji} setEmoji={setEmoji} />} />
+        <Route path='/' element={<HomeComponent/>} />
+        <Route path='/new-game' element={<GameComponent winEmoji={winEmoji} setEmoji={setEmoji} />} />
         <Route path='/results' element={<ResultsComponent winEmoji={winEmoji} />} />
       </Routes>
     </Box>
