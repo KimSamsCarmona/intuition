@@ -1,11 +1,18 @@
 import React from 'react';
-import { Avatar, Box, Button, Card, Grid, Typography } from '@mui/material';
+import { Avatar, Box, Button, Card, Grid, Typography, Stack } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 export const ResultsComponent = ({winEmoji}) => {
   
   const navigate = useNavigate();
+
+  //to play again with same player
   const playAgain = () => {
+    navigate ('/new-game');
+  }
+
+  //to quit game with current player
+  const quitGame = () => {
     navigate ('/');
   }
   return (
@@ -72,27 +79,44 @@ export const ResultsComponent = ({winEmoji}) => {
       </Card>
       <Box
         sx={{
-          display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           p: 4
         }}>
-            <Button
-            fullwidth
-            size='large'
-            variant='contained'
-            style={{
-              width: '100%',
-              height: '63px',
-              backgroundColor: '#2596BE',
-              color: 'black',
-              fontSize: '2rem',
-              fontWeight: 'bolder'
-            }}
-            onClick={playAgain}
-          >
-            Play Again
-        </Button>
+          <Stack spacing={2}>
+              <Button
+              fullwidth ='true'
+              size='large'
+              variant='contained'
+              style={{
+                width: '100%',
+                height: '63px',
+                backgroundColor: '#2596BE',
+                color: 'black',
+                fontSize: '2rem',
+                fontWeight: 'bolder'
+              }}
+              onClick={playAgain}
+            >
+              Play Again
+          </Button>
+          <Button
+              fullwidth ='true'
+              size='large'
+              variant='contained'
+              style={{
+                width: '100%',
+                height: '63px',
+                backgroundColor: '#9BD8E659',
+                color: 'black',
+                fontSize: '2rem',
+                fontWeight: 'bolder'
+              }}
+              onClick={quitGame}
+            >
+              Quit
+          </Button>
+        </Stack>
       </Box>
     </div>
   );
